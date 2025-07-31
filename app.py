@@ -101,11 +101,15 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import cohere
-
+from dotenv import load_dotenv  # ✅ Correct
+import os
 # ✅ Cohere API Key
 
-COHERE_API_KEY = "4Ypi8MREWd6gs0urmzhOiWEZts2hTGEPH3nLhO3j"  # Replace with your API key
-co = cohere.Client(COHERE_API_KEY)
+# ✅ Load the .env file
+load_dotenv()
+
+# ✅ Get API key securely
+COHERE_API_KEY = os.getenv("COHERE_API_KEY")
 
 FACTORS = {
     "electricity": 0.82,
