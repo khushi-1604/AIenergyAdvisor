@@ -103,7 +103,9 @@ import matplotlib.pyplot as plt
 import cohere
 
 # ✅ Cohere API Key
-COHERE_API_KEY = "4Ypi8MREWd6gs0urmzhOiWEZts2hTGEPH3nLhO3j"  # Replace with your API key
+import os
+COHERE_API_KEY = os.getenv("COHERE_API_KEY")
+
 co = cohere.Client(COHERE_API_KEY)
 
 FACTORS = {
