@@ -49,8 +49,12 @@ def get_ai_tips(bill, km, ac_hours, cook_type):
     Tips should be short, practical, and eco-friendly.
     """
 
-    response = co.chat(model="command-r", message=prompt)
-    text = response.text
+    response = co.chat(
+        model="command-r",
+        messages=[{"role": "user", "content": prompt}]
+    )
+
+    text = response.message.content[0].text
     return [tip.strip(" -•") for tip in text.split("\n") if tip.strip()]
 
 st.set_page_config(page_title="🌱 Smart Energy Advisor", page_icon="🌱", layout="wide")
