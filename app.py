@@ -3,12 +3,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import cohere
-from dotenv import load_dotenv  # ✅ Correct
 import os
-# ✅ Cohere API Key
-
-# ✅ Load the .env file
-load_dotenv()
 
 # ✅ Get API key securely
 COHERE_API_KEY = os.getenv("COHERE_API_KEY")
