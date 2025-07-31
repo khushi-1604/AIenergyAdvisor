@@ -7,6 +7,7 @@ from dotenv import load_dotenv  # ✅ Correct
 import os
 # ✅ Cohere API Key
 
+# ✅ Load the .env file
 load_dotenv()
 
 # ✅ Get API key securely
