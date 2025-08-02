@@ -4,6 +4,13 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import cohere
 
+
+st.set_page_config(page_title="🌱 Smart Energy Advisor", page_icon="🌱", layout="wide")
+
+st.title("🌱 Welcome to Smart Energy Advisor")
+st.video("earth.mp4")
+
+
 # ✅ Cohere API Key
 
 COHERE_API_KEY = "4Ypi8MREWd6gs0urmzhOiWEZts2hTGEPH3nLhO3j"  # Replace with your API key
